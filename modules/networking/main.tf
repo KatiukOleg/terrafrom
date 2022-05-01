@@ -24,6 +24,10 @@ resource "aws_internet_gateway" "igw" {
 resource "aws_eip" "nat_eip" {
     vpc = true 
     depends_on = [aws_internet_gateway.igw]
+    tags = {
+      Name = "${var.environment}-nat_eip"
+      Environment = "${var.environment}"
+    }
 }
 
 # NAT gateway
@@ -32,7 +36,7 @@ resource "aws_nat_gateway" "natgw" {
     subnet_id = element(aws_subnet.public_subnet.*.id, 0)
 
     tags = {
-        Name = "nat-gw"
+        Name = "${var.environment}-nat-gw"
         Environment = "${var.environment}"
     }
 }
