@@ -1,9 +1,6 @@
 variable "AWS_REGION" {
     description = "Default AWS region for provisioning resources"
-}
-
-variable "AWS_PROFILE" {
-    description = "Default AWS profile"
+    default = "eu-north-1"
 }
 
 variable "environment" {
