@@ -30,4 +30,4 @@ override.tf.json
 # example: *tfplan*
 
 # Ignore vars.tf where explicit values could be exist
-vars.tf
+#vars.tf
