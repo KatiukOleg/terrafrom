@@ -3,7 +3,8 @@ locals {
 }
 
 module "Networking" {
-    source = "./modules/Networking"
+    source = "./modules/networking"
+    
     region = var.AWS_REGION
     environment = var.environment
     vpc_cidr = var.vpc_cidr
