@@ -32,7 +32,7 @@ resource "aws_nat_gateway" "natgw" {
     subnet_id = element(aws_subnet.public_subnet.*.id, 0)
 
     tags = {
-        Name = "nat-gw"
+        Name = "${var.environment}-nat-gw"
         Environment = "${var.environment}"
     }
 }
