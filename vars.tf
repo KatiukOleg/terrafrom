@@ -5,6 +5,7 @@ variable "AWS_REGION" {
 
 variable "environment" {
     description = "AWS Environment"
+    default = "DEV"
 }
 
 variable "vpc_cidr" {
@@ -13,12 +14,12 @@ variable "vpc_cidr" {
 
 variable "public_subnets_cidr" {
     type = list(any)
-    description = "CIDR block for Public Subnet"
+    description = "CIDR block for Public Subnets"
 }
 
 variable "private_subnets_cidr" {
     type = list(any)
-    description = "CIDR block for Private Subnet"
+    description = "CIDR block for Private Subnets"
 }
 
 variable "availability_zones" {
