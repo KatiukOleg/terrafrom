@@ -5,6 +5,7 @@ variable "AWS_REGION" {
 
 variable "environment" {
     description = "AWS Environment"
+    default = "DEV"
 }
 
 variable "vpc_cidr" {
